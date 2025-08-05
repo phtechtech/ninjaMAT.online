@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NinjaMat</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div id="level-screen" class="screen">
+    <img id="ninja" src="logo.png" class="sprite2" />
+    <h1>Escolha o Nível🔢</h1>
+    <button onclick="startGame('basico')">🟢 Básico</button>
+    <button onclick="startGame('medio')">🟡 Medio</button>
+    <button onclick="startGame('ninja')">🔴 Ninja</button>
+  </div>
+
+  <div id="game-screen" class="game-container hidden">
+    <h1>NinjaMat⛩️</h1>
+    <div class="sprites">
+      <img id="ninja" src="ninja.png" class="sprite" />
+      <img id="enemy" src="enemy.png" class="sprite" />
+    </div>
+    <p id="question">Quanto é 3 + 4?</p>
+    <input type="number" id="answer" placeholder="Digite sua resposta" />
+    <button onclick="checkAnswer()">Responder</button>
+    
+    <div class="status">
+      <p>✅ Zumbis derrotados: <span id="score">0</span></p>
+      <p>❤️ Vidas: <span id="lives">2</span></p>
+      <p id="timer" class="hidden">⏱️ Tempo: <span id="time-left">5</span>s</p>
+    </div>
+    <p id="message"></p>
+  </div>
+
+  <audio id="sound-hit" src="hit.mp3"></audio>
+  <audio id="sound-fail" src="fail.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
